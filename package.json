@@ -3,8 +3,10 @@
   "version": "0.0.0-development",
   "private": true,
   "description": "A GitHub Action to track statistics for a GitHub organization in a CSV file",
-  "main": "index.js",
-  "scripts": {},
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "ncc build bin/org-stats-action.js -o dist"
+  },
   "keywords": [
     "github-action"
   ],
@@ -14,5 +16,7 @@
     "@actions/core": "^1.2.4",
     "@octokit/action": "^2.7.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@zeit/ncc": "^0.22.3"
+  }
 }
