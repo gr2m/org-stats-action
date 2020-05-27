@@ -1,0 +1,15 @@
+name: GitHub Organization Stats
+description: "A GitHub Action to track statistics for a GitHub organization"
+branding:
+  icon: "database"
+  color: green
+inputs:
+  org:
+    description: "GitHub organization login"
+    required: true
+outputs:
+  data:
+    description: "stats as JSON string"
+runs:
+  using: "node12"
+  main: "dist/index.js"
