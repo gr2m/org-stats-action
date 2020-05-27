@@ -1,10 +1,33 @@
 # org-stats-action
 
-> A GitHub Action to track statistics for a GitHub organization in a CSV file
+> A GitHub Action to fetch statistics for a GitHub organization
 
 ## Usage
 
-Work in progress, see [#1](https://github.com/gr2m/org-stats-action/pull/1)
+Example to log JSON result for the [@octokit](https://github.com/octokit) organization.
+
+```yml
+Name: Log @octokit organization statistics
+on:
+  schedule:
+    # https://crontab.guru/every-day
+    - cron: 0 0 * * *
+
+jobs:
+  logOctokitStats:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: gr2m/orgs-stats-action@v1.x
+        id: stats
+        with:
+          org: octokit
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: |
+          cat << EOF
+          result: ${{ steps.stats.outputs.data }}
+          EOF
+```
 
 ## License
 
