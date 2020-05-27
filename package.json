@@ -2,14 +2,10 @@
   "name": "org-stats-action",
   "version": "0.0.0-development",
   "private": true,
-  "description": "A GitHub Action to track statistics for a GitHub organization in a CSV file",
-  "main": "dist/index.js",
   "scripts": {
     "build": "ncc build bin/org-stats-action.js -o dist"
   },
-  "keywords": [
-    "github-action"
-  ],
+  "repository": "https://github.com/gr2m/org-stats-action",
   "author": "Gregor Martynus (https://twitter.com/gr2m)",
   "license": "MIT",
   "dependencies": {
