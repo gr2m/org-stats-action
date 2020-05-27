@@ -1,0 +1,29 @@
+on: [push]
+name: Test
+jobs:
+  readmeExample:
+    name: "[TEST] README example"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: "npm ci"
+      # - name: "Log stats for @octokit"
+      #   uses: ./
+      #   id: stats
+      #   with:
+      #     org: octokit
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: "Log stats for @octokit"
+        run: node bin/org-stats-action
+        id: stats
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          INPUT_ORG: octokit
+      - run: |
+          cat << EOF
+          result: ${{ steps.stats.outputs.data }}
+          EOF
