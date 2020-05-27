@@ -1,5 +1,5 @@
-on: [push]
 name: Test
+on: [push]
 jobs:
   readmeExample:
     name: "[TEST] README example"
