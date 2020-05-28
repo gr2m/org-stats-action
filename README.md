@@ -17,7 +17,7 @@ jobs:
   logOctokitStats:
     runs-on: ubuntu-latest
     steps:
-      - uses: gr2m/orgs-stats-action@v1.x
+      - uses: gr2m/org-stats-action@v1.x
         id: stats
         with:
           org: octokit
