@@ -8,7 +8,7 @@
   "repository": "https://github.com/gr2m/org-stats-action",
   "author": "Gregor Martynus (https://twitter.com/gr2m)",
   "dependencies": {
-    "@actions/core": "^1.2.4",
+    "@actions/core": "^1.2.6",
     "@octokit/action": "^2.7.1"
   },
   "devDependencies": {
