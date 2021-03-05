@@ -5,7 +5,7 @@
   "scripts": {
     "build": "ncc build bin/org-stats-action.js -o dist"
   },
-  "repository": "https://github.com/gr2m/org-stats-action",
+  "repository": "github:gr2m/org-stats-action",
   "author": "Gregor Martynus (https://twitter.com/gr2m)",
   "dependencies": {
     "@actions/core": "^1.2.6",
