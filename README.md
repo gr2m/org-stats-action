@@ -7,7 +7,7 @@
 ### Fetch and log stats
 
 ```yml
-Name: Log @octokit organization statistics
+name: Log @octokit organization statistics
 on:
   schedule:
     # https://crontab.guru/every-day
